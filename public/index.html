@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Thinking in Backbone</title>
+    <meta charset="utf-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        #app {
+            margin: 20px auto;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <script id="search-bar-template" type="text/x-handlebars-template">
+        <input type="text" placeholder="Search...">
+        <p>
+            <input type="checkbox">
+            Only show products in stock
+        </p>
+    </script>
+
+    <script id="product-table-template" type="text/x-handlebars-template">
+        <thead>
+            <tr>
+            <th>Name</th>
+            <th>Price</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </script>
+
+    <script id="product-row-template" type="text/x-handlebars-template">
+        <td>{{#if stocked}}{{name}}{{else}}<span style="color: red">{{name}}</span>{{/if}}</td>
+        <td>{{ price }}</td>
+    </script>
+
+    <script id="product-category-row-template" type="text/x-handlebars-template">
+        <th colspan="2">{{ category }}</th>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
+

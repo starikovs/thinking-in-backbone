@@ -1,0 +1,15 @@
+{
+    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "settings": {
+        "ecmascript": 6
+    },
+    "rules": {
+        "no-console": 0
+    }
+}
+
